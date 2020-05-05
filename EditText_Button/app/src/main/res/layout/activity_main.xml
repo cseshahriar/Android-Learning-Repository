@@ -15,14 +15,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="15dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:background="@android:color/holo_blue_dark"
         android:fontFamily="monospace"
         android:gravity="center"
         android:padding="10dp"
         android:text="EditText and Button App"
         android:textColor="#fff"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -30,8 +30,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:layout_marginTop="30dp"
-        android:id="@+id/editText"
+        android:layout_marginTop="15dp"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -40,16 +40,7 @@
 
     <EditText
         android:layout_marginTop="5dp"
-        android:hint="Enter Password"
-        android:id="@+id/editText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
-
-    <EditText
-        android:layout_marginTop="5dp"
-        android:id="@+id/editText3"
+        android:id="@+id/address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -61,9 +52,27 @@
         android:layout_marginTop="20dp"
         android:textColor="#fff"
         android:background="@android:color/holo_red_light"
-        android:id="@+id/button"
+        android:id="@+id/submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit" />
+        android:text="On Clcik Event" />
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:textColor="#fff"
+        android:background="@android:color/holo_purple"
+        android:id="@+id/submit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Another Activity"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:text=""
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
