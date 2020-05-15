@@ -2,8 +2,8 @@ package com.example.listviewandgridview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +22,10 @@ public class MainActivity extends AppCompatActivity {
         firstListView = findViewById(R.id.firstList);
 
         // array adaptar
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, fruits);
-        firstListView.setAdapter(arrayAdapter);
+        //ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, fruits);
+
+        // custom list adapter
+        CustomListadaptar customListadaptar = new CustomListadaptar(this, firstListView,fruits, image);
+        firstListView.setAdapter(customListadaptar);
     }
 }
