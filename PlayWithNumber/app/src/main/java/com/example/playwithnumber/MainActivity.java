@@ -3,6 +3,9 @@ package com.example.playwithnumber;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,10 +15,10 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    TextView display;
-    Button submitBtn;
-    EditText input;
-    int randomNumber, userNumber;
+    public TextView display;
+    public Button submitBtn;
+    public EditText input;
+    public int randomNumber, userNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
                 userNumber = Integer.parseInt(userNumberStr);
 
                 // logic
-                if(userNumber < randomNumber) {
+                if(userNumber < 0 ) {
+                    Toast.makeText(MainActivity.this, "Please enter positive number", Toast.LENGTH_SHORT).show();
+                } else if(userNumber < randomNumber) {
                     Toast.makeText(MainActivity.this, "Please enter higher number", Toast.LENGTH_SHORT).show();
                 } else if(userNumber > randomNumber) {
                     Toast.makeText(MainActivity.this, "Please enter lower number", Toast.LENGTH_SHORT).show();
@@ -48,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
                     randomNumber = rand.nextInt(10);
                     input.setText(" ");
                 }
+
+
             }
         });
     }

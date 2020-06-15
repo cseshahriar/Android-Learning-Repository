@@ -1,0 +1,46 @@
+Android:
+-------
+Variable: cameCase 
+margin: dp
+padding: dp 
+textSize: sp 
+martch_parent: Full Width (block) 
+wrap_content: element width (inline-block)
+
+# conponents:
+------------
+1. Activity: An activity is a class that represent  a single screen.
+
+2. View: A view is the UI element such as button, label, text field etc
+
+3. Intent: Intent is used to invoke component. It is mainly use to(Start the service, Lubch an activity, Display a web page, display a list of contacts, Broadcast message, Dial a phone call)
+
+4. service: Service is a background process that can run a long time.
+
+5. Content Provider: Content Provider are used to share data between the application 
+
+6. Fragment: Fragments are like parts of activity. An activity can display one more Fragments on the screen at the same time.
+
+
+
+# life cycle:
+-------------
+Android activity lifecycle is controlled by 7 methods of android.app.Activity class. The android activity is the subclass of ContextThemeWrapper class  
+
+1. onCreate : called when activity is first created 
+
+2. osStart: called when activit is becomming visible to the user 
+
+3. onResume : called when activity will start interacting with the use 
+
+4. onPause : called when activity is not visible to the uer 
+
+5. onStop: called when activity is no longer visible to the user 
+
+6. onRestart: called after your activity is stopped, prior to start 
+
+7. onDestroy: called before the activity is destroyed 
+
+
+Java:
+--------------
