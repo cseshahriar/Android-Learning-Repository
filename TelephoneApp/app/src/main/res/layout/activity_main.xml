@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:padding="10dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_marginBottom="15dp"
+        android:padding="8dp"
+        android:textColor="#fff"
+        android:background="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="Make A Call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+  <EditText
+      android:text="01919083098"
+      android:id="@+id/phone"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+
+    <Button
+        android:textColor="#fff"
+        android:background="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/callbtn"
+        android:text="Call Now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
