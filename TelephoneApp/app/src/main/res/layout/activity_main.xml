@@ -20,11 +20,22 @@
         android:text="Make A Call"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
   <EditText
+      android:inputType="number"
       android:text="01919083098"
       android:id="@+id/phone"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"/>
+
+    <EditText
+        android:inputType="text"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Message"
+        android:id="@+id/msgEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <Button
         android:textColor="#fff"
@@ -33,6 +44,26 @@
         android:layout_marginTop="20dp"
         android:id="@+id/callbtn"
         android:text="Call Now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:textColor="#fff"
+        android:background="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/smsbtn"
+        android:text="Send SMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:textColor="#fff"
+        android:background="@android:color/holo_purple"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/emailbtn"
+        android:text="Send Email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>
