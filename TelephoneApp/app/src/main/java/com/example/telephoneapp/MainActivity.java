@@ -21,7 +21,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     // properties
-    EditText editText, msg;
+    EditText editText, msg, emailEt;
     Button button, smsbutton, emailbutton;
     private  int PHONE_PERMISSION_CODE = 03;
 
@@ -32,9 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
         editText = findViewById(R.id.phone);
         msg = findViewById(R.id.msgEt);
+        emailEt = findViewById(R.id.emailEt);
         button = findViewById(R.id.callbtn);
         smsbutton = findViewById(R.id.smsbtn);
         emailbutton = findViewById(R.id.emailbtn);
+
 
         final String mobileNumber = editText.getText().toString();
 
@@ -79,7 +81,17 @@ public class MainActivity extends AppCompatActivity {
         emailbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                String email = emailEt.getText().toString();
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{email});
+                i.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
+                i.putExtra(Intent.EXTRA_TEXT   , "body of email");
+                try {
+                    startActivity(Intent.createChooser(i, "Send mail..."));
+                } catch (android.content.ActivityNotFoundException ex) {
+                    Toast.makeText(MainActivity.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
